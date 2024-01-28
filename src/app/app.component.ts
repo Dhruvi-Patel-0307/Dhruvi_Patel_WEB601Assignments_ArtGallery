@@ -7,12 +7,12 @@ import { ContentCardComponent } from './content-card/content-card.component';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,ContentCardComponent],
-  //templateUrl: './app.component.html',
+  templateUrl: './app.component.html',
   //styleUrl: './app.component.css',
   template: `
   <div>
     <h1>Welcome to My App</h1>
-    <app-content-card></app-content-card>
+    </app-content-card>
   </div>
 `,
 })
