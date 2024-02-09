@@ -9,3 +9,15 @@
     padding: 20px;
     margin: 15px;
   }
+  div{
+    background-color:purple;
+    color: white;
+  }
+  div:nth-of-type(2){
+    background-color:aqua;
+    color:red;
+  }
+  div:last-of-type{
+    background-color:darkred;
+    color: black;
+  }

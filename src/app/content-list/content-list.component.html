@@ -1,10 +1,17 @@
-<div *ngFor="let contentItem of contentItems; let isFirst = first" class="content-card" 
-(click) = "displayContentInfo(contentItem)"
-[class.first-item]="isFirst">
-  <img [src]="contentItem.imgURL" class="content-card-image" height="250px" width="200px">
-  <h2>{{ contentItem.title }}</h2>
-  <p><strong>Description:</strong> {{ contentItem.description }}</p>
-  <p><strong>Creator:</strong> {{ contentItem.creator }}</p>
-  <p *ngIf="contentItem.type"><strong>Type: </strong>{{ contentItem.type }}</p>
-  <p *ngIf="contentItem.tags && contentItem.tags.length > 0"><strong>Tags:</strong> {{ contentItem.tags.join(', ') }}</p>
+<input type="text" [(ngModel)]="searchTitle" placeholder="Enter Art title">
+<button (click)="checkContentExists()">Search Art title</button>
+
+<p [ngStyle]="{'color': contentExists ? 'green' : 'red'}">{{ message }}</p>
+
+<div>
+<h1>Unspecified</h1>
+<app-content-card *ngFor="let contentItem of contentItems | typefilterout: ''" [contentItem]="contentItem"></app-content-card>
+</div>
+<div>
+<h1>Abstract art type</h1>
+<app-content-card *ngFor="let contentItem of contentItems | typefilterout: 'Abstract'" [contentItem]="contentItem"></app-content-card>
+</div>
+<div>
+<h1>Art</h1>
+<app-content-card *ngFor="let contentItem of contentItems | typefilterout: 'Art'" [contentItem]="contentItem"></app-content-card>
 </div>

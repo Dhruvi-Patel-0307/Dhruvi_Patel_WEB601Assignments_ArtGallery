@@ -1,6 +1,6 @@
 {
   "name": "dhruvi-patel-web601-assignments-art-gallery",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
