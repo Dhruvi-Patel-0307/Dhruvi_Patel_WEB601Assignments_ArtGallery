@@ -4,11 +4,12 @@ import { Content } from '../helper-files/content-interface';
 import { ContentCardComponent } from '../content-card/content-card.component';
 import { TypefilteroutPipe } from '../typefilterout.pipe';
 import { FormsModule } from '@angular/forms';
+import { HoverAffectDirective } from '../hover-affect.directive';
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, TypefilteroutPipe, FormsModule],
+  imports: [CommonModule, ContentCardComponent, TypefilteroutPipe, FormsModule, HoverAffectDirective],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -36,7 +37,7 @@ export class ContentListComponent implements OnInit {
         title: "Oil Painting",
         description:"A classic kind of painting called oil painting uses pigments suspended in oil as the painting medium.",
         creator:"My hobby",
-        imgURL:"https://m.media-amazon.com/images/I/71ogALVKNnL._AC_UF894,1000_QL80_.jpg",
+        imgURL:"",
         type:"",
         tags: ["oil", "art"]
       },
